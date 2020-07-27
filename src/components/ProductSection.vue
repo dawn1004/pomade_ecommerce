@@ -1,5 +1,6 @@
 <template>
   <div class="product-section">
+    {{name}}
     <div class="productsss-container">
       <div class="product-container" v-for="(product, index) in products" :key="index">
         <div class="img-container">
@@ -37,56 +38,6 @@ export default {
   },
   data() {
     return {
-      products: [
-        {
-          url: require(`../assets/pomades/product (1).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (2).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (3).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (4).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (5).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (6).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (7).jpg`),
-          name: "Greasy Basky POmade",
-          price: 560.0,
-          description: { hold: 4, shine: 1, washability: 3, restylability: 5 },
-        },
-        {
-          url: require(`../assets/pomades/product (8).jpg`),
-          name: "Greasy Basky POmade1",
-          price: 560.0,
-          description: { hold: 2, shine: 2, washability: 2, restylability: 5 },
-        },
-      ],
       hoverUrl: "",
       view_product: {
         url: require(`../assets/pomades/product (8).jpg`),
@@ -99,6 +50,8 @@ export default {
   methods: {
     addToCart(target) {
       alert(target);
+      const args = { index: target, byIndex: true };
+      this.$store.commit("addProductsOnCart", args);
     },
     viewProduct(index) {
       console.log(index);
@@ -124,6 +77,11 @@ export default {
         }
       });
     });
+  },
+  computed: {
+    products() {
+      return this.$store.state.products;
+    },
   },
 };
 </script>

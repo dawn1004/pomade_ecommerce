@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <a href="#" class="logo">Pormade Cartel</a>
+    <a href="#" class="logo" @click="homeRedirect">Pormade Cartel</a>
 
     <div class="hamburger">
       <a href="#" class="hider">ABOUT US</a>
@@ -12,7 +12,7 @@
         <div href class="separator">
           <Separator />
         </div>
-        <a href>
+        <a href @click="cartRedirect">
           <ShoppingCart />
         </a>
       </div>
@@ -65,6 +65,12 @@ export default {
         hider2.style.display = "none";
         hamburger.style.height = `0px`;
       }
+    },
+    homeRedirect() {
+      this.$router.push("/");
+    },
+    cartRedirect() {
+      this.$router.push("/Checkout");
     },
   },
 };

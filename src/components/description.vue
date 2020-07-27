@@ -25,7 +25,7 @@
           <p>₱{{view_product.price}}</p>
 
           <ShoppingCart2 class="cart-logo" />
-          <span>Add to cart</span>
+          <span @click="()=>{addToCart(view_product)}">Add to cart</span>
         </div>
       </div>
     </div>
@@ -50,6 +50,12 @@ export default {
     hideModal() {
       const modal = document.querySelector(".description-modal");
       modal.style.left = -100 + "vw";
+    },
+    addToCart(target) {
+      // console.log(target);
+      const args = { obj: target, byIndex: false };
+
+      this.$store.commit("addProductsOnCart", args);
     },
   },
 };

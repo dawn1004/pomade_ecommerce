@@ -1,22 +1,17 @@
 <template>
   <div id="app">
     <Nav />
-    <LandingPage />
-    <ProductSection />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Nav from "./components/Nav";
-import LandingPage from "./components/LandingPage";
-import ProductSection from "./components/ProductSection";
 
 export default {
   components: {
     Nav,
-    LandingPage,
-    ProductSection
-  }
+  },
 };
 </script>
 
@@ -30,4 +25,4 @@ export default {
   box-sizing: border-box;
   font-family: "Roboto Slab", serif;
 }
- </style>
+</style>
