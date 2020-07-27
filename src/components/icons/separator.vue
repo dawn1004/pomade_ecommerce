@@ -1,0 +1,42 @@
+<template>
+  <svg width="2" height="38" viewBox="0 0 2 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+      fill="#1A1A1A"
+      class="icons"
+    />
+    <path
+      d="M2 10C2 10.5523 1.55228 11 1 11C0.447715 11 0 10.5523 0 10C0 9.44772 0.447715 9 1 9C1.55228 9 2 9.44772 2 10Z"
+      fill="#1A1A1A"
+      class="icons"
+    />
+    <path
+      d="M2 19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19C0 18.4477 0.447715 18 1 18C1.55228 18 2 18.4477 2 19Z"
+      fill="#1A1A1A"
+      class="icons"
+    />
+    <path
+      d="M2 28C2 28.5523 1.55228 29 1 29C0.447715 29 0 28.5523 0 28C0 27.4477 0.447715 27 1 27C1.55228 27 2 27.4477 2 28Z"
+      fill="#1A1A1A"
+      class="icons"
+    />
+    <path
+      d="M2 37C2 37.5523 1.55228 38 1 38C0.447715 38 0 37.5523 0 37C0 36.4477 0.447715 36 1 36C1.55228 36 2 36.4477 2 37Z"
+      fill="#1A1A1A"
+      class="icons"
+    />
+  </svg>
+</template>
+<script>
+export default {
+  name: "Separator"
+};
+</script>
+
+<style scoped>
+@media only screen and (max-width: 600px) {
+  .icons {
+    fill: white;
+  }
+}
+</style>
