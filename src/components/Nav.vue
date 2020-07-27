@@ -12,9 +12,9 @@
         <div href class="separator">
           <Separator />
         </div>
-        <a href @click="cartRedirect">
+        <span @click="cartRedirect">
           <ShoppingCart />
-        </a>
+        </span>
       </div>
     </div>
 
@@ -141,7 +141,7 @@ export default {
     width: 100vw;
     height: 0px;
     z-index: 2;
-    transition: 1s;
+    transition: 0.5s;
   }
 
   .nav .hamburger .hider,
